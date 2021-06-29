@@ -1,0 +1,12 @@
+.square {
+    padding: 5em;
+}
+
+.square {
+    border-radius: 0;
+    border: none;
+}
+
+.square:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.game {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-board {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}   
+
+.game-actions {
+    width: 100%;
+    display: flex;
+}
+
+.game-actions button {
+    padding: 1em 2em 1em 2em;
+    margin-bottom: 1em;
+}
+

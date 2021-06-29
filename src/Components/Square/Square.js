@@ -1,3 +1,5 @@
+import './Square.css';
+
 /**
  * Represent a piece of the game
  * Is a clickable element
