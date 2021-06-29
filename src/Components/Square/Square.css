@@ -1,10 +1,17 @@
 .square {
-    padding: 5em;
-}
-
-.square {
     border-radius: 0;
     border: none;
+    font-size: 50px;
+    font-family: 'Indie Flower', cursive;
+    padding: 15px 0 15px 0;
+}
+
+.font-transparent {
+    color: transparent;
+}
+
+.font-white {
+    color: white;
 }
 
 .square:hover {

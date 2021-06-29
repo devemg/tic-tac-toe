@@ -8,8 +8,8 @@ import './Square.css';
  */
 function Square (props) {
     return (
-      <button className="square" onClick={props.onClick}>
-        {props.value}
+      <button className={`square ${props.value?'font-color':'font-transparent'}`} onClick={props.onClick}>
+        {props.value?props.value:'1'}
       </button>
     );
 }
