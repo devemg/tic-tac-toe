@@ -30,6 +30,16 @@
     width: 30%;
 }
 
+.game-info {
+    color: white;
+    font-family: cursive;
+}
+
+.game-info h2 {
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+
 .game-messages {
     width: 100%;
     text-align: center;
@@ -52,4 +62,17 @@
 .start-button:hover {
     background-color: #ff7094;
     cursor: pointer;
+}
+
+.btn-history {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-family: cursive;
+}
+
+.btn-history:hover {
+    cursor: pointer;
+    color: #4b511d;
 }
