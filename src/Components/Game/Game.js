@@ -13,22 +13,28 @@ class Game extends React.Component {
       }
     ],
     stepNumber: 0,
-    xIsNext: true
+    xIsNext: true,
+    isPlaying:true
   };
 
   /**
    * Handle restart game
    */
   handleRestart = ()=>{
-    this.setState({
+    this.setState(()=>({
       history: [
         {
           squares: Array(9).fill(null)
         }
       ],
       stepNumber: 0,
-      xIsNext: true
-    });
+      xIsNext: true,
+      isPlaying: true
+    }));
+  }
+
+  handleStart = ()=>{
+    this.setState((prev)=>({ ...prev,isPlaying: true }));
   }
   
     /**
@@ -37,6 +43,9 @@ class Game extends React.Component {
      * @returns 
      */
     handleClick(i) {
+      if(!this.state.isPlaying){
+        return;
+      }
       const history = this.state.history.slice(0, this.state.stepNumber + 1);
       const current = history[history.length - 1];
       const squares = current.squares.slice();
@@ -44,7 +53,7 @@ class Game extends React.Component {
         return;
       }
       squares[i] = this.state.xIsNext ? "X" : "O";
-      this.setState({
+      this.setState(()=>({
         history: history.concat([
           {
             squares: squares
@@ -52,7 +61,7 @@ class Game extends React.Component {
         ]),
         stepNumber: history.length,
         xIsNext: !this.state.xIsNext
-      });
+      }));
     }
 
     /**
@@ -78,10 +87,12 @@ class Game extends React.Component {
      * @param {*} step 
      */
     jumpTo(step) {
-      this.setState({
+      this.setState((prevState)=>({
+        ...prevState,
         stepNumber: step,
-        xIsNext: (step % 2) === 0
-      });
+        xIsNext: (step % 2) === 0,
+        isPlaying: (step+1) === this.state.history.length
+      }));
     }
   
     /**
@@ -109,7 +120,7 @@ class Game extends React.Component {
       return (
         <div className="game-container">
           <div className="game-actions">
-          <button className="restart-button" onClick={this.handleRestart} > Restart </button> 
+          <button className="restart-button" onClick={this.handleRestart} > Restart </button>
           </div>
           <div className="game">  
             <div className="game-board">
