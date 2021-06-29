@@ -7,7 +7,7 @@ import './App.css';
 function App() {
     return (
         <div className="contanier-all">
-           <h1>Tic Tac Toe</h1>
+           <h1> <img alt="" className="img-logo" src="favicon.svg"/> Tic Tac Toe</h1>
            <Game />
         </div>
     );

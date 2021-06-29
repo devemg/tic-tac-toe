@@ -7,8 +7,12 @@ import './Square.css';
  * @returns 
  */
 function Square (props) {
+  let color = 'font-transparent';
+  if(props.value){
+    color = props.value === 'X'?'font-pink':'font-green'
+  }
     return (
-      <button className={`square ${props.value?'font-color':'font-transparent'}`} onClick={props.onClick}>
+      <button className={`square ${color}`} onClick={props.onClick}>
         {props.value?props.value:'1'}
       </button>
     );

@@ -1,7 +1,7 @@
 .square {
     border-radius: 0;
     border: none;
-    font-size: 50px;
+    font-size: 70px;
     font-family: 'Indie Flower', cursive;
     padding: 15px 0 15px 0;
 }
@@ -13,6 +13,16 @@
 .font-white {
     color: white;
 }
+
+.font-green {
+    color: #a1aa4e;
+}
+
+
+.font-pink {
+    color: #FF3366;
+}
+
 
 .square:hover {
     cursor: pointer;
