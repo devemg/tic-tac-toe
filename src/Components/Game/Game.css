@@ -86,3 +86,7 @@
 .restart-button:hover {
     background-color: #abb461;
 }
+
+.btn-invisible {
+    visibility: hidden;
+}

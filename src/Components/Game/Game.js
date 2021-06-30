@@ -120,7 +120,9 @@ class Game extends React.Component {
       return (
         <div className="game-container">
           <div className="game-actions">
-          <button className="restart-button" onClick={this.handleRestart} > Restart </button>
+          <button 
+          className={`restart-button ${this.state.history.length>1?'':'btn-invisible'}`} 
+          onClick={this.handleRestart} > Restart </button>
           </div>
           <div className="game">  
             <div className="game-board">
