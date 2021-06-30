@@ -113,15 +113,17 @@ class Game extends React.Component {
       let status;
       if (winner) {
         status = "Winner: " + winner;
-      } else {
+      } else if(this.state.history.length<10){
         status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+      }else {
+        status = "anyone's won!";
       }
   
       return (
         <div className="game-container">
           <div className="game-actions">
           <button 
-          className={`restart-button ${this.state.history.length>1?'':'btn-invisible'}`} 
+          className={`start-button ${this.state.history.length>1?'':'btn-invisible'}`} 
           onClick={this.handleRestart} > Restart </button>
           </div>
           <div className="game">  

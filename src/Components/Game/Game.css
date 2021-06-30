@@ -77,15 +77,6 @@
     color: #4b511d;
 }
 
-.restart-button {
-    background-color: #4b511d;
-    border: none;
-    color: white;
-}
-
-.restart-button:hover {
-    background-color: #abb461;
-}
 
 .btn-invisible {
     visibility: hidden;
